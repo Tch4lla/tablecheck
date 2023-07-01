@@ -24,7 +24,8 @@ An important aspect of developing SSR apps is testing that data that must be fet
 
 1. Functionality: the tests should pass.
 2. Code Quality: the implementation should be clean, well-organized, follow industry standard typescript/javascript conventions and be easily extensible.
-3. Delivery: the assessment should be completed in a reasonable amount of time.
+3. Understanding: the submission should demonstrate your deep knowledge of e2e testing.
+4. Delivery: the assessment should be completed in a reasonable amount of time.
 
 ## Other
 
