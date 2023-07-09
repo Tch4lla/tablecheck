@@ -1,0 +1,29 @@
+
+      <!doctype html>
+      <html>
+        <head>
+          <link rel="shortcut icon" href="https://cdn0.tablecheck.com/common/images/favicons/tc/v1.0.0/apple-icon-precomposed.png" type="image/x-icon" />
+          <title>Posts</title>
+        </head>
+        <body>
+          <h2>Post</h2>
+          <div data-testid="Single Post">
+            <h3 data-testid="Post Title">undefined</h3>
+            <p data-testid="Post Body">undefined</p>
+            <p data-testid="Post Author">Author: undefined</p>
+          </div>
+
+          <script>
+            // Send data back to localhost:3000/1/custom
+            const data = {};
+            fetch('http://localhost:3000/1/custom', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          </script>
+        </body>
+      </html>
+    

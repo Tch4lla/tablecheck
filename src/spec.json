@@ -164,6 +164,35 @@
           }
         }
       }
+    },
+    "/custom":{
+      "get": {
+        "tags": ["custom post"],
+        "summary": "returns custom post",
+        "responses": {
+          "200": {
+            "description": "All went well",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/post"
+                }
+              }
+            }
+          },
+          "body":[
+            {
+              "title":"custom title"
+            },
+            {
+              "body":"custom body"
+            },
+            {
+              "userID":"custom user Id"
+            }
+          ]
+        }
+      }
     }
   },
   "components": {
