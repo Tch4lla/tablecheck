@@ -54,28 +54,3 @@ export const server = express().get("/:id", async (req, res) => {
     </html>
     `);
 })
-.get("/custom", async (req, res) => {
-  try {
-    const { data: post } = await axios.get('http://localhost:9001/api/custom');
-    res.send(`
-      <!doctype html>
-      <html>
-        <head>
-          <link rel="shortcut icon" href="https://cdn0.tablecheck.com/common/images/favicons/tc/v1.0.0/apple-icon-precomposed.png" type="image/x-icon" />
-          <title>Posts</title>
-        </head>
-        <body>
-          <h2>Post</h2>
-          <div data-testid="Single Post">
-            <h3 data-testid="Post Title">${post.title}</h3>
-            <p data-testid="Post Body">${post.body}</p>
-            <p data-testid="Post Author">Author: ${post.userId}</p>
-          </div>
-        </body>
-      </html>
-    `);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('An error occurred');
-  }
-})
